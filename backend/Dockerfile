@@ -14,7 +14,7 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # Copy the environment file
-COPY .env.sample .env
+COPY .env.sample .env.docker
 
 # Stage 2: Create a lightweight production image
 FROM node:21-alpine AS production
@@ -26,7 +26,7 @@ WORKDIR /app
 COPY --from=build /app ./
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 5050
 
 # Specify the command to run your application
 CMD ["npm", "start"]
