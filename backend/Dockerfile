@@ -26,7 +26,7 @@ WORKDIR /app
 COPY --from=build /app ./
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 5050
 
 # Specify the command to run your application
 CMD ["npm", "start"]

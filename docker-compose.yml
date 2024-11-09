@@ -14,7 +14,7 @@ services:
     env_file:
       - ./backend/.env.docker
     ports:
-      - "8080:8080"
+      - "5050:5050"
     depends_on:
       - mongodb
 
